@@ -1,0 +1,82 @@
+# Vim Practice File
+# =================
+
+# 1. Practice Changing Inside Quotes
+# Try ci" to replace the content inside the quotes
+"This is a quoted text."
+'Single quoted text.'
+`Backtick quoted text.`
+
+# 2. Parentheses, Brackets, and Braces
+# Try ci(, ci[, or ci{ to modify inside the delimiters
+(Some text inside parentheses)
+[Some text inside square brackets]
+{Some text inside curly braces}
+
+# 3. Working with Words
+# Use ciw to replace a word, or diw to delete it
+ReplaceMe WithThis
+DeleteMe Please
+
+# 4. Sentences and Paragraphs
+# Use cis or cip for changes
+This is a single sentence. Edit it.
+This is a new paragraph. It has
+multiple lines for you to practice on.
+
+# 5. Tags
+# Use cit to modify the content inside the HTML/XML tag
+<div>Edit this content inside the tag.</div>
+<p>Practice on this paragraph tag.</p>
+
+# 6. Visual Mode
+# Try selecting multiple lines with V or a block with Ctrl-V
+Visual mode is very helpful!
+You can select multiple lines.
+Experiment with it here.
+
+# 7. Search and Replace
+# Search for the word 'change' and replace it with 'edit'
+You can change this text. Change it again.
+
+# 8. Indentation
+# Use >> and << to adjust the indentation of these lines
+    This line is indented.
+  This line is less indented.
+      This line is more indented.
+
+# 9. Registers
+# Yank this line to the "a register and paste it somewhere else
+Yank me to a register!
+
+# 10. Macros
+# Record a macro to add a prefix like '>> ' to each line below
+Line 1
+Line 2
+Line 3
+Line 4
+
+# 11. Folding
+# Use zf to create a fold, za to toggle it
+Fold this block of text:
+Line A
+Line B
+Line C
+End of block.
+
+# 12. Undo and Redo
+# Experiment with u and Ctrl-r here
+Make some changes to this text and undo them.
+
+# 13. Advanced Motion
+# Use df: or dt: to delete text up to the colon in each line
+Delete up to: here.
+Delete up to: there.
+
+# 14. Substitute
+# Replace the word 'example' with 'practice' in these lines
+This is an example line.
+Another example is here.
+One more example for good measure.
+
+# Happy practicing! Explore and master Vim commands!

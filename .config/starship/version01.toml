@@ -1,0 +1,156 @@
+right_format = """$battery$time"""
+# Prompt: param 2 └─
+
+[character]
+success_symbol = " [ ](#a9a1e1)"
+error_symbol = " [ ](#ff6c6b)"
+vicmd_symbol = "[  ](#98be65)"
+
+# Username
+[username]
+style_user = "dimmed blue"
+
+[hostname]
+ssh_only = false
+format = "<[$hostname]($style)>"
+trim_at = "-"
+style = "dimmed white"
+disabled = true
+
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+unknown_symbol = ""
+disabled = true
+format = "[ ](fg:#ff6c6b bg:none)[$symbol ](fg:#282c34 bg:#ff6c6b)[ ](fg:#ff6c6b bg:#ff7b7a)[$percentage]($style)[ ](fg:#ff7b7a bg:none)"
+[[battery.display]]
+style = "fg:#282c34 bg:#ff7b7a"
+threshold=100
+
+# Last param in the first line/row
+[cmd_duration]
+min_time = 1
+format = "[ ](fg:#9088c8 bg:none)[ ](fg:#282c34 bg:#9088c8)[ ](fg:#9088c8 bg:#a9a1e1)[$duration]($style)[](fg:#a9a1e1 bg:none)"
+disabled = false
+style = "fg:#282c34 bg:#a9a1e1"
+
+# Third param
+[directory]
+format = "[](fg:#da8548 bg:none)[ ](fg:#282c34 bg:#da8548)[](fg:#da8548 bg:#ECBE7B)[ $path]($style)[](fg:#ECBE7B bg:none) "
+style = "fg:#282c34 bg:#ECBE7B"
+truncation_length = 3
+truncate_to_repo=false
+
+[git_branch]
+format = "[](fg:#7fa54c bg:none)[](fg:#282c34 bg:#7fa54c)[](fg:#7fa54c bg:#98be65)[ $branch]($style)[](fg:#98be65 bg:none) "
+style = "fg:#282c34 bg:#98be65"
+
+[git_commit]
+format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
+style = "green"
+
+[git_status]
+format="[](fg:#3896d6 bg:none)[ ](fg:#282c34 bg:#3896d6)[ ](fg:#3896d6 bg:#51afef)[$modified](fg:#282c34 bg:#51afef)[$untracked](fg:#282c34 bg:#51afef)[$staged](fg:#282c34 bg:#51afef)[$renamed](fg:#282c34 bg:#51afef)[](fg:#51afef bg:none)"
+conflicted = "="
+ahead =	"⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count} "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
+style =	"red"
+disabled = false
+
+[git_state]
+rebase = "REBASING"
+merge =	"MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style =	"yellow"
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+disabled = false
+
+[hg_branch]
+symbol = ""
+style = "purple"
+format = "on [$symbol$branch]($style) "
+
+[time]
+style="fg:#282c34 bg:#51afef"
+format="[](fg:#3896d6 bg:none)[ ](fg:#282c34 bg:#3896d6)[](fg:#3896d6 bg:#51afef)[ $time]($style)[](fg:#51afef bg:none)"
+time_format = "%R"
+disabled = true
+
+[docker_context]
+disabled=true
+symbol = " "
+
+[c]
+disabled=true
+
+[conda]
+disabled=false
+symbol = " "
+
+[dart]
+disabled=true
+symbol = " "
+
+[package]
+disabled=true
+symbol = " "
+
+[perl]
+disabled=true
+symbol = " "
+
+[php]
+disabled=true
+symbol = " "
+
+
+[ruby]
+disabled=true
+symbol = " "
+
+[java]
+disabled=true
+symbol = " "
+
+[lua]
+disabled=true
+symbol = " "
+style = "bold blue"
+
+[nodejs]
+disabled=true
+
+[swift]
+disabled=true
+symbol = "ﯣ "
+
+[julia]
+disabled=true
+format = "[$symbol$version]($style) "
+symbol = "ஃ "
+style = "bold green"
+
+[python]
+disabled=false
+format = ' via [${symbol}${pyenv_prefix}${version}( $virtualenv)]($style) '
+symbol = " "
+style = "italic Blue"
+
+[rust]
+disabled=true
+# format = "[$symbol$version]($style) "
+style = "bold green"
+symbol = " "
+
+# Prompt: optional param 1

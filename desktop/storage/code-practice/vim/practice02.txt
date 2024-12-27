@@ -1,0 +1,133 @@
+# Vim Advanced Practice File
+# ==========================
+
+# 1. Substitution
+# ----------------
+# Replace all occurrences of "apple" with "orange" in this block using :%s/apple/orange/g
+I like apple pie.
+Apple cider is great.
+Green apples are sour.
+An apple a day keeps the doctor away.
+
+# Challenge:
+# Replace only the first occurrence of "apple" on each line with "fruit".
+
+# 2. Visual Block Mode (Ctrl-V)
+# -----------------------------
+# Use Ctrl-V to edit the following text columns simultaneously.
+Column 1   Column 2   Column 3
+Data1      Data2      Data3
+Value1     Value2     Value3
+Entry1     Entry2     Entry3
+
+# Challenge:
+# Add a prefix like "-> " to each item in **Column 2**.
+
+# 3. Macros
+# ---------
+# Record a macro to:
+# - Convert all lowercase lines into uppercase
+# - Prefix "LOG: " before each line
+info: server started
+info: connection established
+warning: disk space low
+error: connection lost
+
+# Hint:
+# Record the macro using `qa` to start, `q` to stop, and `@a` to replay.
+
+# 4. Registers
+# ------------
+# Yank this line into register a.
+This line should go into register "a".
+
+# Paste the content of register "a" below these three lines.
+Line 1
+Line 2
+Line 3
+
+# Challenge:
+# Append new yanked content into the same register and paste all combined text.
+
+# 5. Search and Replace with Confirmation
+# ---------------------------------------
+# Use :%s/word/WORLD/gc to replace "word" with "WORLD", confirming each instance.
+word in a sentence.
+Another word is here.
+Yet another word to find.
+
+# Challenge:
+# Replace "word" only when it is at the start of a line.
+
+# 6. Folding
+# ----------
+# Create a fold for the following block using zf, then toggle it using za.
+# Fold starts here:
+Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+# Fold ends here.
+
+# Challenge:
+# Open and close all folds in the file using zR and zM.
+
+# 7. Advanced Motions
+# --------------------
+# Use motions like f, t, and ; to navigate and operate on these lines.
+Find the :colon here.
+Find the !exclamation! here.
+Find the ?question? here.
+
+# Challenge:
+# Delete everything from the start of each line to the special character using df.
+
+# 8. Buffers and Windows
+# -----------------------
+# Open this file in another split window using :vsplit and practice navigating between them.
+# - Use :bnext and :bprev to cycle through buffers.
+# - Use Ctrl-w h/j/k/l to move between windows.
+
+# 9. Tabs
+# -------
+# Open three tabs using :tabedit <filename>.
+# Navigate between them using :tabnext, :tabprev, or gt/gT.
+# Create a new file in a new tab and name it "lesson_tab.txt".
+
+# Challenge:
+# Rearrange the tabs so that "lesson_tab.txt" is the first tab.
+
+# 10. Undo Tree
+# -------------
+# Edit this paragraph and make at least five changes.
+# Use :undo and :redo to go back and forth through the changes.
+# Use :undolist to see the undo history.
+This is a paragraph for testing the undo functionality. Make changes to this text and then explore the undo tree.
+
+# Challenge:
+# Jump to a specific change in the undo tree and resume editing.
+
+# 11. Exploring Help and Plugins
+# ------------------------------
+# Use :help to explore commands and their variations.
+# Examples to try:
+# - :help text-objects
+# - :help registers
+# - :help macros
+
+# Challenge:
+# Install the vim-surround plugin and practice using it to change parentheses to square brackets, quotes, or other delimiters.
+# Example: (Change this) to [Change this].
+
+# 12. Miscellaneous Commands
+# --------------------------
+# Experiment with these:
+# - gg: Jump to the top of the file.
+# - G: Jump to the bottom of the file.
+# - 5G: Jump to line 5.
+# - Ctrl-d: Scroll down half a page.
+# - Ctrl-u: Scroll up half a page.
+
+# Challenge:
+# Find and count all occurrences of the word "challenge" in this file using /challenge and n/N.
+
+# End of Practice File

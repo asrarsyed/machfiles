@@ -1,0 +1,226 @@
+# Vim Mastery Practice File
+# =========================
+
+# 1. Advanced Navigation
+# -----------------------
+# Practice moving around the text efficiently using H, M, L, and searches (/ and ?).
+
+This is the first paragraph for navigation practice.
+It contains several words and phrases to search for.
+Try using /navigation, ?paragraph, or jump to specific lines.
+Use n to go to the next occurrence and N to go backward.
+
+# Challenge:
+# Find the second occurrence of "practice" using searches.
+
+---
+
+# 2. Marks and Bookmarks
+# -----------------------
+# Set marks with ma and jump back using 'a.
+
+Line A: Mark this line with ma.
+Line B: Move somewhere else and return here using 'a.
+Line C: Practice marking across multiple locations.
+
+# Challenge:
+# Set marks on Line A and Line C and switch between them efficiently.
+
+---
+
+# 3. Indentation and Formatting
+# ------------------------------
+# Use > and < to indent lines or blocks of code.
+
+def my_function():
+    x = 10
+    if x > 5:
+        print("Indentation practice!")
+    else:
+        print("Try again!")
+
+# Challenge:
+# Re-indent this code block to align properly.
+
+---
+
+# 4. Visual Block Mode
+# ---------------------
+# Use Ctrl-V to make edits on multiple lines simultaneously.
+
+Name       Age       Score
+Alice      25        90
+Bob        30        85
+Charlie    22        95
+
+# Challenge:
+# Align the columns neatly and add "USA" to every row at the end.
+
+---
+
+# 5. Registers
+# ------------
+# Yank and paste text using named registers.
+
+Copy this line to register a.
+Paste the content of register a below this text.
+
+# Challenge:
+# Append this text to register a and paste all combined text below.
+
+---
+
+# 6. Macros
+# ---------
+# Record and replay a macro to automate repetitive tasks.
+
+item1 - incomplete
+item2 - incomplete
+item3 - incomplete
+
+# Challenge:
+# Record a macro to change "incomplete" to "complete" and apply it to all lines.
+
+---
+
+# 7. Search and Replace
+# ----------------------
+# Use :%s to replace text patterns.
+
+Replace all instances of "foo" with "bar".
+foo is here.
+foo is there.
+foo is everywhere.
+
+# Challenge:
+# Replace only the second occurrence of "foo" on each line.
+
+---
+
+# 8. Folding
+# ----------
+# Practice creating and toggling folds with zf and za.
+
+# Fold starts here:
+Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+# Fold ends here.
+
+# Challenge:
+# Fold this block and toggle it open/closed.
+
+---
+
+# 9. Buffers and Tabs
+# --------------------
+# Practice managing multiple files.
+
+# Challenge:
+# Open this file in a vertical split, then open another buffer.
+# Switch between them using :bnext and :bprev.
+
+---
+
+# 10. Plugins
+# ------------
+# Use plugins like vim-surround to modify delimiters.
+
+[Surround this text with quotes.]
+"Change this text to parentheses."
+
+# Challenge:
+# Use vim-surround to swap square brackets for parentheses.
+
+---
+
+# 11. Custom Commands
+# --------------------
+# Add a custom command to toggle relative line numbers.
+
+# Challenge:
+# Test your custom command by toggling relative and absolute line numbers.
+
+---
+
+# 12. Quickfix List
+# ------------------
+# Practice using a quickfix list for navigation.
+
+TODO: Fix the bug in line 10.
+TODO: Refactor this code block.
+TODO: Optimize the function calls.
+
+# Challenge:
+# Search for all TODOs in the file, create a quickfix list, and navigate through them.
+
+---
+
+# 13. Registers as Scratchpads
+# -----------------------------
+# Use registers to store snippets of text.
+
+Snippet 1: This is stored in register a.
+Snippet 2: This is stored in register b.
+
+# Challenge:
+# Swap the content of register a and register b in the file.
+
+---
+
+# 14. Pasting Without Reindenting
+# --------------------------------
+# Practice pasting code blocks without automatic reindenting.
+
+# Original block:
+if (x > 0) {
+  return true;
+}
+
+# Challenge:
+# Paste this block below without reindenting it.
+
+---
+
+# 15. Recursive Edits with Ranges
+# --------------------------------
+# Use ranges to target specific lines for operations.
+
+Line 1: Target me for edits.
+Line 2: Include me in the changes.
+Line 3: Leave me unchanged.
+
+# Challenge:
+# Replace "Line" with "Row" only in lines 1 and 2.
+
+---
+
+# 16. Large File Navigation
+# --------------------------
+# Simulate navigating a large file.
+
+# Challenge:
+# Quickly jump to the 20th line using a command.
+
+---
+
+# 17. Undo Tree
+# --------------
+# Make multiple edits here and explore the undo tree.
+
+This is a sample paragraph for undo practice.
+Make several edits, undo some of them, and then redo them.
+
+# Challenge:
+# Use :undolist to view the undo history and jump to specific changes.
+
+---
+
+# 18. Help and Exploration
+# -------------------------
+# Explore Vim's help system.
+
+# Challenge:
+# Use :help text-objects to understand text object commands.
+
+# End of Practice File

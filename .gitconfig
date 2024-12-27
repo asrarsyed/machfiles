@@ -1,0 +1,93 @@
+# This is Git's per-user configuration file.
+
+[user]
+  name = Asrar Syed
+  username = asrarsyed
+  email = 120889952+asrarsyed@users.noreply.github.com
+
+[init]
+  defaultBranch = main
+
+[core]
+  editor = nvim
+  autocrlf = input
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[help]
+  autocorrect = 0
+
+[diff]
+  rename = true
+  colorMoved = default
+  algorithm = patience
+  tool = default-difftool
+ 
+[log]
+  decorate = short
+  abbrevCommit = true
+  graph = true
+  stat = true
+
+[status]
+  hints = false
+
+[commit]
+  gpgsign = false
+  verbose = true
+
+[merge]
+  conflictStyle = diff3
+
+[fetch]
+  prune = true
+
+[pull]
+  rebase = true
+
+[push]
+  default = simple
+
+[credential]
+  helper = store
+
+[advice]
+  skippedCherryPicks = false
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = blue # orginally yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold # line info
+  old = red bold # deletions
+  new = green bold # additions
+# whitespace = red reverse
+
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
+
+# [alias]
+#   # Log
+#   lg = log --graph --decorate --all  # Shows the commit history expanded
+#   slg = log --oneline --stat --graph --decorate --all  # Condensed commit history in one line.
+#
+#   # Organization
+#   check = fsck --full --strict  # Checks the repository for integrity and errors.
+#   branches = branch --sort=-committerdate  # Lists branches sorted by the most recent commit date.
+#
+#   # Commit/Unstage
+#   amend = commit --amend --no-edit  # Amends the last commit without changing the commit message.
+#   unstage = reset HEAD --  # Unstages files (removes from the staging area).
+#
+#   # Other
+#   last = log -1 HEAD  # Shows the details of the last commit on the current branch.
+#   undo = reset --soft HEAD~1  # Undoes the last commit but keeps changes in the staging area.

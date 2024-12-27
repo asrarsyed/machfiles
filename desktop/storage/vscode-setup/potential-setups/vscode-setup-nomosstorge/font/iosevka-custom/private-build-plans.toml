@@ -1,0 +1,43 @@
+[buildPlans.iosevka-custom]
+family = "Iosevka Custom"
+spacing = "normal"
+serifs = "sans"
+no-cv-ss = true
+export-glyph-names = false
+
+[buildPlans.iosevka-custom.variants.design]
+capital-c = "serifless"
+c = "bilateral-inward-serifed"
+f = "serifless"
+zero = "dotted"
+one = "base-long-top-serif"
+two = "straight-neck"
+three = "two-arcs"
+four = "open-non-crossing"
+five = "oblique-flat"
+six = "closed-contour"
+seven = "curly-serifless-crossbar"
+eight = "two-circles"
+nine = "closed-contour"
+punctuation-dot = "square"
+asterisk = "turn-hex-high"
+underscore = "above-baseline"
+caret = "medium"
+paren = "flat-arc"
+brace = "curly-flat-boundary"
+percent = "rings-continuous-slash"
+question = "smooth"
+lig-ltgteq = "slanted"
+lig-neq = "more-slanted"
+lig-equal-chain = "without-notch"
+
+[buildPlans.iosevka-custom.ligations]
+inherits = "raku"
+disables = ["center-op-trigger-angle-inside", "center-op-trigger-angle-outside"]
+enables = ["connected-underscore", "ltgt-slash-tag", "html-comment", "kern-bars", "kern-dotty"]
+
+[buildPlans.iosevka-custom.slopes.upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"

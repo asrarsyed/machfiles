@@ -1,0 +1,2 @@
+1725228946210	SessionStore	ERROR	The session file is invalid: : TypeError: state.windows[0] is undefined(resource:///modules/sessionstore/SessionStore.sys.mjs:1153:11) JS Stack trace: initSession@SessionStore.sys.mjs:1153:11
+onBeforeBrowserWindowShown/<@SessionStore.sys.mjs:2021:35
