@@ -1,0 +1,63 @@
+#!/usr/bin/env zsh
+
+# 1. Pre-load essential files
+local -a config_files=(
+    "$ZDOTDIR/options.zsh"
+    "$ZDOTDIR/exports.zsh"
+    "$HOME/.local/share/zap/zap.zsh"
+)
+
+for file in $config_files; do
+    [[ -f $file ]] && source $file
+done
+
+# 2. Load plugins (grouped for better performance)
+plug "zsh-users/zsh-autosuggestions" \
+    "momo-lab/zsh-replace-multiple-dots" \
+    "Aloxaf/fzf-tab" \
+    "zsh-users/zsh-history-substring-search" \
+    "zsh-users/zsh-syntax-highlighting"
+
+# 3. Source local configurations
+local -a local_configs=(
+    "$ZDOTDIR/supercharge.zsh"
+    "$ZDOTDIR/fzf.zsh"
+    "$ZDOTDIR/aliases.zsh"
+    "$ZDOTDIR/functions.zsh"
+)
+
+for config in $local_configs; do
+    [[ -f $config ]] && source $config
+done
+
+# 4. Initialize tools with caching
+function cache_init() {
+    local tool=$1
+    local cache_file="$ZDOTDIR/.${tool}.zsh"
+    local init_cmd=$2
+    
+    if [[ ! -f $cache_file ]] || [[ $(which $tool) -nt $cache_file ]]; then
+        eval "$init_cmd" > $cache_file
+    fi
+    source $cache_file
+}
+
+# Set starship config before caching
+[[ -n $(command -v starship) ]] && export STARSHIP_CONFIG=$HOME/.config/starship/version01.toml
+
+# Cache tool initializations
+cache_init "fzf" "fzf --zsh"
+cache_init "zoxide" "zoxide init zsh"
+[[ -n $(command -v starship) ]] && cache_init "starship" "starship init zsh"
+
+# 5. Custom keybindings
+bindkey -s '\el' 'ls\n'
+
+# 6. Compile config files in background
+{
+    for config_file ($ZDOTDIR/*.zsh); do
+        if [[ -f $config_file && (! -f $config_file.zwc || $config_file -nt $config_file.zwc) ]]; then
+            zcompile $config_file
+        fi
+    done
+} &!

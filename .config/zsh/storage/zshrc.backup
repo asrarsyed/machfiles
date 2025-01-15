@@ -1,0 +1,47 @@
+# Profile File! Runs on Login! Configurations are set here!
+# Global Order: zshenv, zprofile, zshrc, zlogin, zlogout
+
+# <- Zap Plugin Manager ->
+[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
+
+# <- Prompt Initialization ->
+if command -v starship &> /dev/null; then
+  eval "$(starship init zsh)"
+  export STARSHIP_CONFIG=$HOME/.config/starship/version01.toml
+fi
+
+# <- Source Files ->
+[[ -f $ZDOTDIR/options.zsh ]] && source $ZDOTDIR/options.zsh
+[[ -f $ZDOTDIR/exports.zsh ]] && source $ZDOTDIR/exports.zsh
+[[ -f $ZDOTDIR/supercharge.zsh ]] && source $ZDOTDIR/supercharge.zsh # Mostly your compdump manager
+
+# <- Environment Initializations ->
+eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
+
+# <- Additional Source Files ->
+[[ -f $ZDOTDIR/fzf.zsh ]] && source $ZDOTDIR/fzf.zsh
+[[ -f $ZDOTDIR/aliases.zsh ]] && source $ZDOTDIR/aliases.zsh
+[[ -f $ZDOTDIR/functions.zsh ]] && source $ZDOTDIR/functions.zsh
+
+# <- Essential Plugins ->
+plug "zsh-users/zsh-autosuggestions"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-history-substring-search"
+
+# <- Additional Plugins ->
+plug "Aloxaf/fzf-tab"
+plug "momo-lab/zsh-replace-multiple-dots"
+
+# <- Archived Plugins ->
+# plug "romkatv/powerlevel10k"    # Secondary Theme
+# plug "zap-zsh/vim"              # Ineffective (Additional Plugin)
+# plug "hlissner/zsh-autopair"    # Slow (Essential Plugin)
+# plug "Freed-Wu/fzf-tab-source"  # Very Slow (Additional Plugin)
+
+# <- Custom Keybindings ->
+    # Use "bindkey -l" to list available key bindings
+    # Use "bindkey -M viins" to list key bindings for insert mode
+    # Use "bindkey -M vicmd" to list key bindings for command mode
+    
+bindkey -s '\el' 'ls\n' # [Esc-l] - runs command: ls

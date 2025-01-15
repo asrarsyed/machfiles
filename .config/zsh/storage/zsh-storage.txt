@@ -1,0 +1,73 @@
+# <- Backup ZSH Storage ->
+
+# Add a `r` function to zsh that opens ranger either at the given directory or at the one zoxide suggests
+r() {
+  if [ "$1" != "" ]; then
+    if [ -d "$1" ]; then
+      ranger "$1"
+    else
+      ranger "$(zoxide query $1)"
+    fi
+  else
+    ranger
+  fi
+    return $?
+}
+
+# CLI Weather
+function weather () {
+  local options="${2:-1}"
+  curl https://wttr.in/"${1}"\?"${options}"
+}
+
+# Cheat Sheet
+function cheat () {
+  local options=${2:-Q}
+  curl cht.sh/${1}\?${options}
+}
+
+# Man without options will use fzf to select a page
+function fzman(){
+	MAN="/usr/bin/man"
+	if [ -n "$1" ]; then
+		$MAN "$@"
+		return $?
+	else
+		$MAN -k . | fzf --reverse --preview="echo {1,2} | sed 's/ (/./' | sed -E 's/\)\s*$//' | xargs $MAN" | awk '{print $1 "." $2}' | tr -d '()' | xargs -r $MAN
+		return $?
+	fi
+}
+
+# Summary of most frequently used ZSH commands, ranked by usage.
+hstat() {
+  fc -l 1 \
+    | awk '{ CMD[$2]++; count++; } END { for (a in CMD) printf "%d %.2f%% %s\n", CMD[a], CMD[a]*100/count, a }' \
+    | grep -v "./" | sort -nr | head -n 20 | column -c3 -s " " -t | nl
+}
+
+# Loads all CPU cores to 100% utilization for stress testing or benchmarking.
+function maxcpu() {
+  cores=$(sysctl -n hw.ncpu)
+  dn=/dev/null
+  i=0
+  while (( i < $((cores)) )); do
+    yes > $dn &
+    (( ++i ))
+  done
+  echo "Loaded $cores cores. To stop: 'killall yes'"
+
+  # Wait for 3 seconds, then kill the 'yes' processes
+  sleep 3
+  killall yes
+  echo "Stopped all yes processes."
+}
+
+# Execute commands for each file in current directory.
+function each() {
+  for dir in *; do
+    # echo "${dir}:"
+    cd $dir
+    $@
+    cd ..
+  done
+}

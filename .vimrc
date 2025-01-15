@@ -42,6 +42,7 @@ set splitbelow           " create horizontal splits below
 set switchbuf=usetab     " when switching buffers, include tabs
 set tabpagemax=30        " show up to 30 tabs
 
+set clipboard=unnamedplus
 set cryptmethod=blowfish " use blowfish encryption for encrytped files
 let g:netrw_mouse_maps=0 " Ignore mouse clicks when browsing directories
 

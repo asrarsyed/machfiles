@@ -1,78 +1,138 @@
-# This is Git's per-user configuration file.
+# This is git's per-user configuration file.
+
+[include]
+  # include custom themes for the `git-delta`
+  path = ~/.config/delta/catppuccin.gitconfig
+  # include private configuration
+  # path = ~/.gitconfig.local
 
 [user]
   name = Asrar Syed
-  username = asrarsyed
   email = 120889952+asrarsyed@users.noreply.github.com
 
 [init]
+  # override the default branch name for new repositories
   defaultBranch = main
 
 [core]
+  # text viewer for git commands
+  pager = delta
+  # text editor for `commit` & `tag` commands
   editor = nvim
+  # enable CRLF line endings
   autocrlf = input
+  # path to global .gitignore file
   excludesfile = ~/.gitignore
+  # path to global .gitattributes file
   attributesfile = ~/.gitattributes
+  # configures whitespace handling for git
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
+[interactive]
+  # use `git-delta` to show colorized diff
+  diffFilter = delta --color-only
+
+[delta]
+  # set the theme for syntax highlighting
+  features = "catppuccin_macchiato"
+  # enable support for terminal hyperlinks
+  hyperlinks = true
+  # construct the correct URL
+  hyperlinks-file-link-format = "file-line://{path}:{line}"
+  # use only dark mode
+  light = false
+  # show two columns with the line numbers
+  line-numbers = true
+  # activate navigation keybindings
+  navigate = true
+  # activate side-by-side view for the diff
+  side-by-side = true
+
+
 [help]
+  # disable automatic correction of mistyped commands
   autocorrect = 0
 
 [diff]
+  # detect and highlight renamed files
   rename = true
+  # color the moved lines in diffs
   colorMoved = default
+  # use the "patience" algorithm for diffs
   algorithm = patience
-  tool = default-difftool
  
 [log]
-  decorate = short
-  abbrevCommit = true
-  graph = true
+  # show statistics for each commit
   stat = true
+  # display the commit graph
+  graph = true
+  # add decorations (e.g., branch names) to logs
+  decorate = short
+  # abbreviate commit hashes
+  abbrevCommit = true
 
 [status]
+  # disable status hints in the output
   hints = false
 
 [commit]
-  gpgsign = false
+  # include diff of changes in commit messages
   verbose = true
+  # all commits should be GPG signed
+  gpgsign = false
 
 [merge]
+  # set a style in which conflicted hunks are written out to working tree files upon merge
   conflictStyle = diff3
 
 [fetch]
+  # automatically prune remote-tracking branches no longer present
   prune = true
 
 [pull]
+  # rebase commits instead of merging on pull
   rebase = true
 
 [push]
+  # push the current branch with the same name on the remote
   default = simple
 
 [credential]
+  # external helper for when a username/password credential is needed
   helper = store
 
 [advice]
+  # disable advice on skipped cherry-picks
   skippedCherryPicks = false
 
 [color]
+  # automatically enable colored output if supported
   ui = auto
 
 [color "branch"]
+  # current branch in yellow with reverse video effect
   current = yellow reverse
-  local = blue # orginally yellow
+  # local branches in blue (prev. yellow)
+  local = blue
+  # remote branches in green
   remote = green
 
 [color "diff"]
+  # metadata in yellow bold
   meta = yellow bold
-  frag = magenta bold # line info
-  old = red bold # deletions
-  new = green bold # additions
-# whitespace = red reverse
+  # fragment headers (line info) in magenta bold
+  frag = magenta bold
+  # deletions in red bold
+  old = red bold
+  # additions in green bold
+  new = green bold
 
 [color "status"]
+  # added files in green bold
   added = green bold
+  # modified files in yellow bold
   changed = yellow bold
+  # untracked files in red bold
   untracked = red bold
 
 # [alias]

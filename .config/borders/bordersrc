@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Save this file as ~/.config/borders/bordersrc
+# Make it executable with: chmod +x ~/.config/borders/bordersrc
+
+options=(
+	style=round
+	width=4.0
+	hidpi=off
+	active_color=0xffbabbf1
+	inactive_color=0xff414550
+)
+
+borders "${options[@]}"
