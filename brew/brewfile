@@ -1,0 +1,95 @@
+# <- Essential Defaults ->
+tap "homebrew/bundle"             # Enables you to define all your dependencies in a single Brewfile.
+
+# <- Active Taps ->
+tap "homebrew/services"           # For background services using launchctl on macOS
+tap "buo/cask-upgrade"            # Best for manually updating GUI apps (casks) with more control
+
+# <- Inactive Taps ->
+# tap "homebrew/cask-versions"      # For accessing alternate versions of cask applications
+
+
+# <- Essential Defaults ->
+brew "curl"			  # Get a file from an HTTP, HTTPS or FTP server
+brew "stow"                       # Symlink farm manager that organizes software under a single directory
+brew "mas"                        # Command-line interface for the Mac App Store
+
+# <- Programming Language Related ->
+cask "dbeaver-community"	  # Universal database tool and SQL client
+cask "temurin@21"	          # Java Development Kit from the Eclipse Foundation (Adoptium)
+brew "mysql"			  # Open source relational database management system
+brew "fnm"			  # Fast and simple Node.js version manager
+
+# <- Active Packages ->
+brew "git-delta"                  # syntax-highlighting pager for git and diff output
+brew "tealdeer"                   # simplified, example based and community-driven man pages
+brew "starship"                   # cross-shell prompt for astronauts
+brew "neofetch"                   # a command-line system information tool written in bash 3.2+
+brew "pipes-sh"                   # animated pipes terminal screensaver
+brew "cmatrix"                    # terminal screensaver based of "the matrix" like implementation
+brew "ripgrep"                    # search tool like grep and the silver searcher
+brew "emojify"                    # substitute emoji aliases on the command-line
+brew "neovim"                     # ambitious vim-fork focused on extensibility and agility
+brew "zoxide"                     # shell extension to navigate your filesy:stem faster
+brew "vivid"                      # generator for ls_colors with support for multiple color themes
+brew "tokei"                      # fast and accurate code counter
+brew "trash"                      # command-line tool that moves files or folder to the trash
+brew "tmux"                       # terminal multiplexer
+brew "yazi"                       # blazing fast terminal file manager written in Rust
+brew "btop"                       # resource monitor c++ version (Choose 1: btop/neohtop)
+brew "ncdu"                       # detailed disk usage analysis and cleanup with a text-mode user interface
+brew "bat"                        # syntax highlighting with git integration
+brew "eza"                        # modern replacement for ls
+brew "fzf"                        # command-line fuzzy finder written in go 
+brew "duf"                        # quick monitoring and high-level disk usage stats; a better 'df'
+brew "fd"                         # simple, fast and user-friendly alternative to find
+
+# <- Inactive Packages ->
+# brew "gh"                         # intermediate users: github command-line tool
+# brew "rmlint"                     # extremely fast tool to remove dupes and other lint from your filesystem
+# brew "lazygit"                    # simple terminal ui for git commands
+# brew "hyperfine"                  # command-line benchmarking tool
+# brew "lazydocker"                 # advance users: lazier way to manage everything docker
+# brew "git-absorb"                 # advance users: absorb staged changes in current branch
+
+
+# <- Active Cask Apps ->
+cask "nikitabobko/tap/aerospace"  # i3-like tiling window manager for macos
+cask "visual-studio-code"         # open-source code editor
+cask "jordanbaird-ice"            # hide menu bar items to give your mac a cleaner look.
+cask "zen-browser"                # zen browser, another alternative browser
+cask "appcleaner"                 # small application which allows you to thoroughly uninstall unwanted apps
+cask "miniforge"		  # minimal installer for conda specific to conda-forge
+cask "librewolf"                  # privacy-focused version of the firefox browser
+cask "rectangle"                  # move and resize windows using keyboard shortcuts or snap areas
+cask "obsidian"                   # private and flexible writing app stored locally and mad of plain text markdown files
+cask "itsycal"                    # tiny menu bar calendar
+cask "ghostty"                    # terminal emulator that uses platform-native ui and gpu acceleration
+cask "alfred"                     # application launcher and productivity software
+cask "github"                     # desktop client for github repositories
+cask "maccy"                      # clipboard manager for macos
+
+# <- Inactive Casks ->
+# cask "iterm2"                     # replacement for macos terminal and the successor to iterm
+# cask "bitwarden"                  # password manager for securely storing, managing, and sharing sensitive online data
+# cask "malwarebytes"               # scan and remove malware, spyware, and viruses
+# cask "google-chrome"              # chromium based browser
+# cask "karabiner-elements"         # a powerful and stable keyboard customizer for macos.
+
+
+# <- Active Cask Fonts ->
+cask "font-fira-code"
+cask "font-iosevka-aile"
+cask "font-cascadia-code"
+cask "font-maple-mono-nf"
+cask "font-jetbrains-mono-nerd-font"
+
+
+# <- Active Mac Store Apps ->
+# mas "Microsoft Excel", id: 462058435
+mas "Microsoft Word", id: 462054704
+mas "Pure Paste", id: 1611378436  # paste as plain text by default (sits in menu bar)
+mas "JotItDown", id: 1668513911   # a simple app to quickly note down ideas or checklists
+mas "HP Smart", id: 1474276998    # hp smart app that lets you print, scan, fax, and share documents
+
+# <- Inactive Mac Store Apps ->

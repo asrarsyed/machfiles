@@ -1,0 +1,21 @@
+# OS system files
+._*
+.Trashes
+Thumbs.db
+.DS_Store
+.DS_Store?
+ehthumbs.db
+desktop.ini
+.Spotlight-V100
+
+# Editor files
+*~
+*#
+*.swo
+*.swp
+
+# Backup files
+*.bak
+
+# IDEs
+.vscode

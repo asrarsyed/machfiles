@@ -1,0 +1,14 @@
+# Normalize text files to use LF line endings
+* text=auto
+
+# Treat Markdown files as binary (no diffs)
+*.md binary
+
+# Use a specific diff algorithm for C code
+*.c diff=cpp
+
+# Prevent merge conflicts for lock files
+*.lock merge=ours
+
+# Exclude sensitive files from exports
+secrets.env export-ignore

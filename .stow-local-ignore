@@ -1,0 +1,35 @@
+# ~./machfiles/.stow.local.ignore: Files to be ignored by gnu 'stow'
+#
+# See 'info stow' section "4 Ignore Lists" for more information
+
+# Ignore Specific Folders
+^/fonts$	   # Ignores the fonts folder at the root of your dotfiles repo
+
+# Ignore Specific matchfiles
+^/.git$            # Ignores the .git folder at the root of your dotfiles repo
+^/README.*         # Ignores any README files (e.g., README.md, README.txt)
+^/LICENSE.*        # Ignores any LICENSE files (e.g., LICENSE, LICENSE.md, LICENSE.txt)
+^/.gitignore$      # Ignores the .gitignore file at the root of your dotfiles repo
+^/.gitattributes$  # Ignores the .gitattributes file at the root of your dotfiles repo
+
+# macOS System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor and Backup Files
+.*~                # Matches any files ending with ~ (backup files)
+.*#                # Matches any files ending with # (backup files)
+\.swo              # Matches any .swo files
+\.swp              # Matches any .swp files
+\.bak              # Matches any .bak files
+\.tmp              # Matches any .tmp files
+
+# macOS Specific Hidden Files
+.AppleDouble
+.LSOverride
